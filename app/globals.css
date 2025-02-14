@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom Fade-In Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Your existing glow effects */
+.glow-text {
+  text-shadow: 0px 0px 10px rgba(0, 191, 255, 0.8);
+}
+
+.glow-subtitle {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.6);
+}
+
+/* Additional utility if needed */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
